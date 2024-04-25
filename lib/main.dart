@@ -9,6 +9,7 @@ void main() {
         title: Text(
           'Study to Container',
           style: TextStyle(
+            fontSize: 18,
             color: Colors.white,
           ),
         ),
