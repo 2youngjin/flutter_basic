@@ -1,4 +1,4 @@
-# fastcampus_flutter_test
+# flutter_basic
 
 A new Flutter project.
 
