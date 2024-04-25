@@ -1,23 +1,22 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Widget을 겹겹히 쌓아 배치하기',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
+    home: SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.blue,
+          title: const Text(
+            'Widget을 겹겹히 쌓아 배치하기',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+            ),
           ),
         ),
+        body: Body(),
       ),
-      body: Body(),
     ),
   ));
 }
@@ -58,7 +57,6 @@ class Body extends StatelessWidget {
             style: TextStyle(color: Colors.red, fontSize: 32),
           ),
         )
-
 
         // Container(
         //   width: 500,
