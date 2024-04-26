@@ -70,12 +70,6 @@ class _ExampleStatefulState extends State<ExampleStateful> {
   }
 
   @override
-  void dispose() {
-    super.dispose();
-    textEditingController.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Expanded(
       flex: 1,
@@ -99,4 +93,11 @@ class _ExampleStatefulState extends State<ExampleStateful> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+    textEditingController.dispose();
+  }
+
 }
