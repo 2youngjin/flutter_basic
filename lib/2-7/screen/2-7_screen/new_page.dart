@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class NewPage extends StatelessWidget {
   const NewPage({super.key});
@@ -13,7 +14,8 @@ class NewPage extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+            //Navigator.pop(context);
+            context.pop();
           },
           color: Colors.white,
         ),
@@ -33,16 +35,18 @@ class NewPage extends StatelessWidget {
             TextButton(
               child: const Text('Go to back'),
               onPressed: () {
-                Navigator.pop(context);
+                //Navigator.pop(context);
+                context.pop();
               },
             ),
             TextButton(
               child: const Text('Go to New Page2'),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const NewPage2()),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => const NewPage2()),
+                // );
+                context.pushNamed('new1');
               },
             ),
           ],
@@ -64,7 +68,8 @@ class NewPage2 extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+            //Navigator.pop(context);
+            context.pop();
           },
           color: Colors.white,
         ),
@@ -81,13 +86,15 @@ class NewPage2 extends StatelessWidget {
             TextButton(
               child: const Text('Go to Back'),
               onPressed: () {
-                Navigator.pop(context);
+                //Navigator.pop(context);
+                context.pop();
               },
             ),
             TextButton(
               child: const Text('Go to Home'),
               onPressed: () {
-                Navigator.popUntil(context, (route) => route.isFirst);
+                //Navigator.popUntil(context, (route) => route.isFirst);
+                context.goNamed('home');
               },
             )
           ],
